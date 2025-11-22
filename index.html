@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Personal portfolio of Your Name — projects, CV, education, contact." />
+
+
+<!-- Simple embedded styles for a clean portfolio starter -->
+<style>
+:root{ --bg:#0f1720; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.03);}
+*{box-sizing:border-box} body{font-family:Inter,Segoe UI,Roboto,system-ui,Arial,Helvetica,sans-serif; margin:0; background:linear-gradient(180deg,#071024 0%, #0f1720 100%); color:#e6eef8; line-height:1.4}
+.container{max-width:980px;margin:32px auto;padding:24px}
+header{display:flex;gap:16px;align-items:center}
+.photo{width:96px;height:96px;border-radius:14px;overflow:hidden;flex:0 0 96px;background:#0a1220;display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover}
+h1{margin:0;font-size:28px}
+p.lead{margin:6px 0 0;color:var(--muted)}
+
+
+nav{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;font-size:14px}
+
+
+main{margin-top:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+
+.projects .card{display:flex;flex-direction:column;gap:8px}
+.project-screenshot{width:100%;height:120px;border-radius:8px;background:#091022;display:block;overflow:hidden}
+.project-screenshot img{width:100%;height:100%;object-fit:cover}
+
+
+footer{margin:36px 0 12px;color:var(--muted);font-size:14px}
+
+
+/* responsive tweaks */
+@media (max-width:520px){.container{padding:16px}.photo{width:72px;height:72px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="photo">
+<!-- Replace src with your photo: assets/photo.jpg -->
+<img src="/assets/photo.jpg" alt="Your Name" />
+</div>
+<div>
+<h1>Your Name</h1>
+<p class="lead">Applied mathematician · Data scientist · Model validation · Python</p>
+
+
+<nav>
+<a class="btn" href="#projects">Projects</a>
+<a class="btn" href="#cv">CV</a>
+<a class="btn" href="#education">Education</a>
+<a class="btn" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+
+<main>
+<!-- About / summary -->
+<section id="about" class="card" style="margin-top:18px">
+<h2 style="margin-top:0">About me</h2>
+<p style="color:var(--muted)">Short intro: who you are, what you do, and what you want to build next. Keep it 2–3 lines.</p>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="projects" style="margin-top:18px">
+<h2>Selected projects</h2>
+<div class="grid" style="margin-top:12px">
+
+
+<article class="card">
+<div class="project-screenshot">
+<!-- Replace with a screenshot image: assets/project1.png -->
+<img src="/assets/project1.png" alt="Project 1 screenshot">
+</div>
+<h3>Project 1 — Title</h3>
+<p>Short description (one sentence). Tech: Python, Pandas, Jupyter.</p>
+</html>
