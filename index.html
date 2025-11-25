@@ -1,91 +1,153 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Iván Darío Peña Camargo — Portfolio</title>
-<meta name="description" content="Personal portfolio of Your Name — projects, CV, education, contact." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Peña — Portfolio</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
 
-<!-- Simple embedded styles for a clean portfolio starter -->
-<style>
-:root{ --bg:#0f1720; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.03);}
-*{box-sizing:border-box} body{font-family:Inter,Segoe UI,Roboto,system-ui,Arial,Helvetica,sans-serif; margin:0; background:linear-gradient(180deg,#071024 0%, #0f1720 100%); color:#e6eef8; line-height:1.4}
-.container{max-width:980px;margin:32px auto;padding:24px}
-header{display:flex;gap:16px;align-items:center}
-.photo{width:96px;height:96px;border-radius:14px;overflow:hidden;flex:0 0 96px;background:#0a1220;display:grid;place-items:center}
-.photo img{width:100%;height:100%;object-fit:cover}
-h1{margin:0;font-size:28px}
-p.lead{margin:6px 0 0;color:var(--muted)}
+        /* Top navigation bar */
+        .tabs {
+            display: flex;
+            background: #222;
+            padding: 10px;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
+        .tab-button {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-nav{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-.btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;font-size:14px}
+        .tab-button:hover {
+            background: #666;
+        }
 
+        /* Tab content sections */
+        .tab-content {
+            display: none;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0px 0px 10px #cccccc;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
 
-main{margin-top:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+        /* Make first tab visible */
+        #home { display: block; }
 
+        h2 {
+            margin-top: 0;
+            color: #444;
+        }
 
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
-.card h3{margin:0 0 8px}
-.card p{margin:0;color:var(--muted);font-size:14px}
+        iframe {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
 
+    <script>
+        function openTab(tabName) {
+            // Hide all sections
+            let contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
 
-.projects .card{display:flex;flex-direction:column;gap:8px}
-.project-screenshot{width:100%;height:120px;border-radius:8px;background:#091022;display:block;overflow:hidden}
-.project-screenshot img{width:100%;height:100%;object-fit:cover}
+            // Show selected section
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
 
-
-footer{margin:36px 0 12px;color:var(--muted);font-size:14px}
-
-
-/* responsive tweaks */
-@media (max-width:520px){.container{padding:16px}.photo{width:72px;height:72px}}
-</style>
 </head>
+
 <body>
-<div class="container">
-<header>
-<div class="photo">
-<!-- Replace src with your photo: assets/photo.jpg -->
-<img src="/assets/photo.jpg" alt="Your Name" />
-</div>
-<div>
-<h1>Iván Darío Peña Camargo</h1>
-<p class="lead">Mathematician (BSc) · Master of Science (MSc)</p>
 
+    <!-- Top Buttons (Tabs) -->
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('home')">Home</button>
+        <button class="tab-button" onclick="openTab('projects')">Projects</button>
+        <button class="tab-button" onclick="openTab('cv')">CV</button>
+        <button class="tab-button" onclick="openTab('education')">Education</button>
+        <button class="tab-button" onclick="openTab('certifications')">Certifications</button>
+        <button class="tab-button" onclick="openTab('about')">About Me</button>
+    </div>
 
-<nav>
-<a class="btn" href="#projects">Projects</a>
-<a class="btn" href="/assest/phto.jpg"></a>
-<a class="btn" href="#education">Education</a>
-<a class="btn" href="#certifications">Certifications</a>
-<a class="btn" href="#contact">Contact</a>
-</nav>
-</div>
-</header>
+    <!-- HOME -->
+    <div id="home" class="tab-content">
+        <h2>Welcome</h2>
+        <p>Hello! I'm <strong>Iván Peña</strong>, an applied mathematician and data scientist.  
+        This is my personal portfolio where I share my projects, CV, education and certifications.</p>
 
+        <img src="assets/photo.jpg" style="max-width:200px; border-radius:10px;">
+    </div>
 
-<main>
-<!-- About / summary -->
-<section id="about" class="card" style="margin-top:18px">
-<h2 style="margin-top:0">About me</h2>
-<p style="color:var(--muted)">Mathematician and Master in Applied Mathematics with strong foundations in numerical analysis, numerical methods, optimization, and computational modeling. Experienced in solving inverse problems, implementing mathematical algorithms in multiple programming languages, and analyzing complex systems across biological, engineering, epidemiological, financial and population domains. Skilled in working with real and synthetic datasets, performing statistical analysis, validating models, and translating results into actionable insights. Motivated by rigorous problem-solving, continuous learning, and applying mathematical and data-driven methods to support decision-making and innovation.</p>
-</section>
+    <!-- PROJECTS -->
+    <div id="projects" class="tab-content">
+        <h2>Projects</h2>
+        <p>Here you can add descriptions and links to your main projects.</p>
 
+        <ul>
+            <li><strong>Project 1:</strong> Description and GitHub link</li>
+            <li><strong>Project 2:</strong> Description and GitHub link</li>
+        </ul>
+    </div>
 
-<!-- Projects -->
-<section id="projects" class="projects" style="margin-top:18px">
-<h2>Selected projects</h2>
-<div class="grid" style="margin-top:12px">
+    <!-- CV Section -->
+    <div id="cv" class="tab-content">
+        <h2>Curriculum Vitae</h2>
+        <p>Your CV is displayed below:</p>
 
+        <iframe src="assets/CV.pdf" width="100%" height="600px"></iframe>
+    </div>
 
-<article class="card">
-<div class="project-screenshot">
-<!-- Replace with a screenshot image: assets/project1.png -->
-<img src="/assets/project1.png" alt="Project 1 screenshot">
-</div>
-<h3>Project 1 — Title</h3>
-<p>Short description (one sentence). Tech: Python, Pandas, Jupyter.</p>
+    <!-- EDUCATION -->
+    <div id="education" class="tab-content">
+        <h2>Education</h2>
+        <p>Write your bachelor's and master's thesis information here.</p>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div id="certifications" class="tab-content">
+        <h2>Certifications</h2>
+        <p>These are some of my technical certifications:</p>
+
+        <ul>
+            <li>
+                <strong>Python for Data Science – IBM</strong>
+                <iframe src="assets/certifications/IBM-python.pdf" width="100%" height="500px"></iframe>
+            </li>
+
+            <li>
+                <strong>Machine Learning – Stanford Online</strong>
+                <iframe src="assets/certifications/stanford-ml.pdf" width="100%" height="500px"></iframe>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="tab-content">
+        <h2>About Me</h2>
+        <p>Short biography or personal summary.</p>
+    </div>
+
+</body>
 </html>
