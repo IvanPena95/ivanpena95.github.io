@@ -62,45 +62,6 @@
             border: 1px solid #ccc;
             border-radius: 8px;
         }
-
-        /* ---------- Contact section layout ---------- */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;   /* two columns */
-            gap: 14px 22px;
-            align-items: start;
-            margin-top: 18px;
-        }
-
-        /* For phones, switch to 1 column */
-            @media (max-width: 640px) {
-            .contact-grid {
-            grid-template-columns: 1fr;
-        }
-        }
-
-        /* contact icons */
-            .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px;
-        }
-
-        /* copy button */
-            .copy-btn {
-            padding: 4px 8px;
-            font-size: 12px;
-            border: 1px solid #aaa;
-            border-radius: 6px;
-            background: #f3f3f3;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }    
-
-        .copy-btn:hover {
-        background: #dcdcdc;
-        }
         
         /* ---------- Footer styles (add near end of <style>) ---------- */
         .site-footer {
@@ -153,7 +114,7 @@
         <button class="tab-button" onclick="openTab('cv')">CV</button>
         <button class="tab-button" onclick="openTab('education')">Education</button>
         <button class="tab-button" onclick="openTab('certifications')">Certifications</button>
-        <button class="tab-button" onclick="openTab('contact')">Contact Me</button>
+        <button class="tab-button" onclick="openTab('contact')">Contact</button>
     </div>
 
     <!-- HOME -->
@@ -230,66 +191,93 @@
     </div>
 
     <!-- CONTACT -->
-    <div id="contact" class="tab-content">
+    <div id="contact" class="tab-content" style="display:none">
+    <h2>Contact</h2>
+    <p>You can reach me through any of the following channels:</p>
 
-      <h2>Contact Me</h2>
-      <p>You can reach me through any of the following channels:</p>
+    <ul style="list-style:none; padding:0; font-size:18px; line-height:2;">
 
-      <div class="contact-grid">
+        <li>
+            <!-- Email Icon -->
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <rect width="20" height="14" y="3" fill="#555" rx="3"></rect>
+                <polyline points="2,4 10,10 18,4" fill="none" stroke="white"></polyline>
+            </svg>
+            &nbsp;Email 1:
+            <a href="mailto:ivan.pena@cimat.mx">ivan.pena@cimat.mx</a>
+        </li>
 
-        <!-- EMAILS COLUMN -->
-        <div class="contact-item">
-          📧 <strong>ivan.pena@cimat.mx</strong>
-          <button class="copy-btn" onclick="copyEmail('ivan.pena@cimat.mx')">Copy</button>
-        </div>
+        <li>
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <rect width="20" height="14" y="3" fill="#555" rx="3"></rect>
+                <polyline points="2,4 10,10 18,4" fill="none" stroke="white"></polyline>
+            </svg>
+            &nbsp;Email 2:
+            <a href="mailto:idpenac@unal.edu.co">idpenac@unal.edu.co</a>
+        </li>
 
-        <div class="contact-item">
-          📧 <strong>idpenac@unal.edu.co</strong>
-          <button class="copy-btn" onclick="copyEmail('idpenac@unal.edu.co')">Copy</button>
-        </div>
+        <li>
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <rect width="20" height="14" y="3" fill="#555" rx="3"></rect>
+                <polyline points="2,4 10,10 18,4" fill="none" stroke="white"></polyline>
+            </svg>
+            &nbsp;Email 3:
+            <a href="mailto:ivdapenac@gmail.com">ivdapenac@gmail.com</a>
+        </li>
 
-        <div class="contact-item">
-          📧 <strong>ivdapenac@gmail.com</strong>
-          <button class="copy-btn" onclick="copyEmail('ivdapenac@gmail.com')">Copy</button>
-        </div>
+        <br>
 
-        <!-- LINKS COLUMN -->
-        <div class="contact-item">
-          🔗 <a href="https://facebook.com/euc.pit" target="_blank">Facebook</a>
-        </div>
+        <li>
+            <!-- Facebook Icon -->
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <circle cx="10" cy="10" r="10" fill="#1877F2"></circle>
+                <text x="10" y="15" font-size="14" font-weight="bold" text-anchor="middle" fill="white">f</text>
+            </svg>
+            &nbsp;Facebook:
+            <a href="https://facebook.com/euc.pit" target="_blank">facebook.com/euc.pit</a>
+        </li>
 
-        <div class="contact-item">
-          🐱 <a href="https://github.com/IvanPena95" target="_blank">GitHub</a>
-        </div>
+        <li>
+            <!-- GitHub Icon -->
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <circle cx="10" cy="10" r="10" fill="#333"></circle>
+                <text x="10" y="14" font-size="12" text-anchor="middle" fill="white">🐙</text>
+            </svg>
+            &nbsp;GitHub:
+            <a href="https://github.com/IvanPena95" target="_blank">github.com/IvanPena95</a>
+        </li>
 
-        <div class="contact-item">
-          📊 <a href="https://kaggle.com/ivandariopenacamargo" target="_blank">Kaggle</a>
-        </div>
+        <li>
+            <!-- Kaggle Icon -->
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <rect width="20" height="20" fill="#20BEFF" rx="4"></rect>
+                <text x="10" y="14" font-size="14" text-anchor="middle" fill="white">K</text>
+            </svg>
+            &nbsp;Kaggle:
+            <a href="https://kaggle.com/ivandariopenacamargo" target="_blank">kaggle.com/ivandariopenacamargo</a>
+        </li>
 
-        <div class="contact-item">
-          💼 <a href="https://linkedin.com/in/ivan-dario-pena-camargo" target="_blank">LinkedIn</a>
-        </div>
+        <li>
+            <!-- LinkedIn Icon -->
+            <svg width="20" height="20" style="vertical-align:middle;">
+                <rect width="20" height="20" fill="#0A66C2" rx="3"></rect>
+                <text x="10" y="14" font-size="12" text-anchor="middle" fill="white">in</text>
+            </svg>
+            &nbsp;LinkedIn:
+            <a href="https://linkedin.com/in/ivan-dario-pena-camargo" target="_blank">
+                linkedin.com/in/ivan-dario-pena-camargo
+            </a>
+        </li>
 
-        <div class="contact-item">
-          🌐 <a href="https://ivanpena95.github.io" target="_blank">Portfolio</a>
-        </div>
+    </ul>
 
-      </div>
-    </div>
+</div>
 
     <!-- ---------- Footer (paste before </body>) ---------- -->
     <footer class="site-footer">
       © <span id="footer-year">2025</span> Iván Darío Peña Camargo — Built with ❤️ using GitHub Pages·
     </footer>
     <!-- ---------- end footer ---------- --> 
-
-    <script>
-      function copyEmail(text) {
-        navigator.clipboard.writeText(text).then(function() {
-          alert("Copied: " + text);
-        });
-      }
-    </script>
 
 </body>
 </html>
