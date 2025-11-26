@@ -62,6 +62,31 @@
             border: 1px solid #ccc;
             border-radius: 8px;
         }
+        /* ---------- Footer styles (add near end of <style>) ---------- */
+.site-footer {
+  margin-top: 40px;
+  padding: 18px 14px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  background: transparent; /* keep same background as page */
+}
+
+/* small link style in footer */
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.18s;
+}
+.site-footer a:hover {
+  color: #005bbb; /* hover color; change if you want */
+}
+
+/* small responsive tweak */
+@media (max-width: 520px) {
+  .site-footer { font-size: 13px; padding: 14px 10px; }
+}
     </style>
 
     <script>
@@ -80,6 +105,15 @@
 </head>
 
 <body>
+
+    <!-- ---------- Footer (paste before </body>) ---------- -->
+    <footer class="site-footer">
+      © <span id="footer-year">2025</span> Iván Darío Peña Camargo — Built with ❤️ using GitHub Pages·
+      <a href="https://github.com/IvanPena95" target="_blank" rel="noopener">GitHub</a>
+      <span style="margin:0 6px">·</span>
+      <a href="https://ivanpena95.github.io" target="_blank" rel="noopener">Portfolio</a>
+    </footer>
+    <!-- ---------- end footer ---------- -->
 
     <!-- Top Buttons (Tabs) -->
     <div class="tabs">
@@ -241,16 +275,6 @@
             <a href="https://linkedin.com/in/ivan-dario-pena-camargo" target="_blank">
                 linkedin.com/in/ivan-dario-pena-camargo
             </a>
-        </li>
-
-        <li>
-            <!-- Portfolio Icon -->
-            <svg width="20" height="20" style="vertical-align:middle;">
-                <circle cx="10" cy="10" r="10" fill="#555"></circle>
-                <text x="10" y="14" font-size="12" text-anchor="middle" fill="white">🌐</text>
-            </svg>
-            &nbsp;Portfolio:
-            <a href="https://ivanpena95.github.io" target="_blank">ivanpena95.github.io</a>
         </li>
 
     </ul>
