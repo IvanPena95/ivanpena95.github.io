@@ -1,2 +1,2 @@
 # ivanpena95.github.io
-Root page
+Personal portfolio where I share my projects, CV, education and certifications. Constantly updated. 
